@@ -1,0 +1,141 @@
+.v-container 
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.v-bg
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.v-inter
+{
+    position: relative;
+    bottom: 70%;
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.u-input-view
+{
+    position: relative;
+    top: 120rpx;
+    height: 124rpx;
+    width: 80%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-bottom: 1rpx solid rgb(160, 160, 160);
+}
+
+
+.icon-view
+{
+    position: relative;
+    top: 18rpx;
+    left: 20rpx;
+    width: 44rpx;
+    height: 44rpx;
+}
+
+.u-text-view
+{
+    position: relative;
+    top: 18rpx;
+    left: 40rpx;
+    width: calc(100% - 44rpx - 40rpx);
+    height: 84rpx;
+
+    display: inline-block;
+    color: white;
+    font-size: 38rpx;
+}
+
+
+.u-button-view
+{
+    position: relative;
+    top: 210rpx;
+    height: 90rpx;
+    width: 80%;
+    line-height: 90rpx;
+    color: white;
+    font-size: 34rpx;
+    border-radius: 10rpx;
+
+    text-align: center;
+    background-color:rgb(43, 162, 69);
+    padding: 0;
+}
+
+.wx-view
+{
+    position: relative;
+    top: 280rpx;
+    width: 100%;
+    background-color:transparent;
+}
+
+.wx-button-view {
+    width: 80%;
+    height: 98rpx;
+    line-height: 98rpx;
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 49rpx;
+    text-align: center;
+    border: 1rpx solid rgb(43, 162, 69);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+.wx-icon
+{
+    position: relative;
+    width: 44rpx;
+    height: 44rpx;
+}
+
+
+.wx-label
+{
+    position: relative;
+    left: 10rpx;
+    color: white;
+    font-size: 34rpx;
+}
+
+
+.v-code-button-view
+{
+    position: relative;
+    position: relative;
+    top: 340rpx;
+
+    width: 80%;
+    height: 98rpx;
+    line-height: 98rpx;
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 49rpx;
+    text-align: center;
+    border: 1rpx solid rgb(43, 162, 69);
+
+    color: white;
+}

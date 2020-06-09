@@ -1,0 +1,21 @@
+<view class="v-container">
+    <image class="v-bg" src="/resource/login.jpg" mode="aspectFill"></image>
+    <view class="v-inter">
+        <!-- <view class="u-input-view">
+            <image class="icon-view" src="../../resource/login_phone_s.png"></image>
+            <input class="u-text-view" type="text" placeholder="请输入用户名/手机号" value="{{userName}}" bindinput="bindUserNameInput"></input>
+        </view>
+        <view class="u-input-view">
+            <image class="icon-view" src="../../resource/login_ma_s.png"></image>
+            <input class="u-text-view" type="text" password placeholder="请输入密码" value="{{password}}" bindinput="bindPasswordInput"></input>
+        </view>
+        <view class="u-button-view" catchtap="loginButtonAction">登录</view> -->
+        <view class="wx-view">
+            <button class="wx-button-view" open-type='getPhoneNumber' bindgetphonenumber='getMobilePhone'>
+                <image class="wx-icon" src="../../resource/wechatLogin.png"></image>
+                <text class="wx-label">登录</text>
+            </button>
+        </view>
+        <button class="v-code-button-view" bindtap="lgoinWithVerCodeAction">短信验证码登录</button>
+    </view>
+</view>

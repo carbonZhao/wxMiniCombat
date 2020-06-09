@@ -1,0 +1,13 @@
+<view class="view-base">
+   <view class="main-view">
+        <view class="input-view">
+            <input class="input-item-view" placeholder="请输入有效手机号码" type="number" maxlength="11" bindinput="mmiInputMobileAction"></input>
+        </view>
+        <view class="v-ver-view">
+            <input class="v-input-item" placeholder="请输入验证码" type="number" maxlength="11" bindinput="mmiInputVerCodeAction"></input>
+            <button class="v-input-btn" bindtap="getVerCodeAction">{{verTitle}}</button>
+        </view>
+       
+        <button class="v-button-view" bindtap="doneAction">登录</button>
+    </view>
+</view>
