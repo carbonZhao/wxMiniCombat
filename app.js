@@ -1,6 +1,16 @@
 //app.js
 App({
   onLaunch: function () {
+    let res = wx.getSystemInfoSync()
+    let statusBarHeight = res.statusBarHeight //状态栏高度
+    if (statusBarHeight <= 0) {
+      statusBarHeight = 20   //状态栏高度，默认为20
+    }
+
+    let navgationHeight = 44 //顶部导航栏高度,默认为44
+    this.globalData.statusBarHeight = statusBarHeight
+    this.globalData.navgationHeight = navgationHeight
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -34,6 +44,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    statusBarHeight: 20,
+    navgationHeight: 44,
   }
 })

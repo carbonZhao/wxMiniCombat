@@ -1,2 +1,3 @@
-<!--pages/mainPage/mainPage.wxml-->
-<text>pages/mainPage/mainPage.wxml</text>
+<view class="view-base">
+    <UINavigationBar statusBarHeight="{{statusBarHeight}}" navBarHeight="{{navBarHeight}}" showLeftBarItem="{{false}}" showSeprator="{{false}}" barBackgroundColor='' barBackgroundSrc="../../resource/navbar.png" leftText="" viewTitle="首页" viewTitleColor="#FFF"></UINavigationBar>
+</view>

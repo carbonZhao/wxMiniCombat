@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": 
+  {
+      "UINavigationBar": "../../components/UINavigationBar/UINavigationBar"
+  },
+  "navigationStyle": "custom"
 }

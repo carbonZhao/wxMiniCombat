@@ -1,0 +1,21 @@
+<!-- 根视图，用于管理整个导航栏，将导航栏包在此视图view中。导航栏的高度由statusBarHeight和navBarHeight变量决定 -->
+<view class="bar-view" style="height:{{statusBarHeight+navBarHeight}}px;">
+    <!-- 导航栏背景图设置。如果设置为加载资源文件或者是网络图片时，则设置barBackgroundSrc值。 -->
+    <image wx:if="{{barBackgroundSrc.length>0}}" class="bar-background" src="{{barBackgroundSrc}}" style="height:{{statusBarHeight+navBarHeight}}px"></image>
+    <!-- 导航栏背景图设置。如果不需要通过资源文件或者是网络图片显示背景图片，则使用传过来的颜色值代替 -->
+    <image wx:elif="{{barBackgroundColor.length>0}}" class="bar-background" style="background-color:{{barBackgroundColor}};height:{{statusBarHeight+navBarHeight}}px;width:100%;"></image>
+    <!-- 如果以上两者都没有配置或者是配置为空，则使用传过来的CSS样式进行背景颜色的设置 -->
+    <image wx:else class="bar-background-css" style="width:100%;height:{{statusBarHeight+navBarHeight}}px;"></image>
+    <!-- 如果配置了导航栏的标题，则进行显示，否则不显示导航栏标题 -->
+    <view wx:if="{{viewTitle.length>0}}" class="nav-title-view" style="top:{{statusBarHeight}}px;height:{{navBarHeight}}px;">
+        <text class="nav-title" style="color:{{viewTitleColor}}">{{viewTitle}}</text>
+    </view>
+    <!-- 如果配置showLeftBarItem=true,则显示返回按钮 -->
+    <view wx:if="{{showLeftBarItem==true}}" class="left-tools" style="background-color:transparent;top:{{statusBarHeight}}px;height:{{navBarHeight}}px" catchtap="leftBarAction">
+        <image class='left-icon' src="{{leftBackIcon}}"></image>
+        <!-- 是否显示返回按钮对应的标题 -->
+        <text wx:if="{{leftText.length>0}}" class="left-text">{{leftText}}</text>
+    </view>
+    <!-- 是否显示导航栏下方的分割线 -->
+    <view wx:if="{{showSeprator==true}}" class="sep-view"></view>
+</view>
