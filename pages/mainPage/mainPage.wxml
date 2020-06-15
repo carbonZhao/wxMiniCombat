@@ -1,3 +1,14 @@
 <view class="view-base">
     <UINavigationBar statusBarHeight="{{statusBarHeight}}" navBarHeight="{{navBarHeight}}" showLeftBarItem="{{false}}" showSeprator="{{false}}" barBackgroundColor='' barBackgroundSrc="../../resource/navbar.png" leftText="" viewTitle="首页" viewTitleColor="#FFF"></UINavigationBar>
+    <scroll-view class="main-view" scroll-y="true" enable-flex="true" style="height:calc(100% - {{statusBarHeight+navBarHeight}}px);top:{{statusBarHeight+navBarHeight}}px">
+        <view class="swiper-banner-view">
+            <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="darkgray" indicator-active-color="black" style="height:100%">
+                <block wx:for="{{bannersList}}" wx:key="index">
+                    <swiper-item>
+                        <image class="swiper-item" src="{{item.url}}"></image>
+                    </swiper-item>
+                </block>
+             </swiper>
+        </view>
+    </scroll-view>
 </view>
